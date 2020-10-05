@@ -38,14 +38,40 @@ function App() {
         { answerText: 'Cincinnati', isCorrect: false },
         { answerText: 'Columbus', isCorrect: true },
       ], },
-  ]
+  ];
+
+  return (
+      <div className={'app'}>
+        {/* HINT: replace "false" with logic to display the
+      score when the user has answered all the questions */}
+
+        {/*{false ? (*/}
+        {/*    <div className='score-section'>You scored 1 out of {questions.length}</div>*/}
+        {/*) : (*/}
+        {/*    <>*/}
+
+        <div className={'question-title'}>
+            <div className={'question-count'}>
+              <span>Question that user is on</span>/{questions.length}
+            </div>
+            <div className={'question-text'}>
+              Will get text from questions array here
+            </div>
+        </div>
+
+        <div className={'question-answers'}>
+          <button>answer text here</button>
+          <button>answer text here</button>
+          <button>answer text here</button>
+          <button>answer text here</button>
+        </div>
 
 
+       {/*</>*/}
+       {/* )}*/}
 
-
-
-
-
+      </div>
+  );
 }
 
 export default App;
