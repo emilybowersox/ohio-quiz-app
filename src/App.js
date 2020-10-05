@@ -46,7 +46,7 @@ function App() {
       score when the user has answered all the questions */}
 
         {/*{false ? (*/}
-        {/*    <div className='score-section'>You scored 1 out of {questions.length}</div>*/}
+        {/*    <div className='user-score'>You scored 1 out of {questions.length}</div>*/}
         {/*) : (*/}
         {/*    <>*/}
 
