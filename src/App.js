@@ -1,4 +1,5 @@
-import React from 'react';
+// import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -39,6 +40,13 @@ function App() {
         { answerText: 'Columbus', isCorrect: true },
       ], },
   ];
+
+  //need to declare what question the user is on, if they still have
+  //questions to go, and how many questions they've gotten right
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [showFinalScore, setShowFinalScore] = useState(false);
+  const [userScore, setUserScore] = useState(0);
+
 
   return (
       <div className={'app'}>
