@@ -43,10 +43,28 @@ function App() {
 
   //need to declare what question the user is on, if they still have
   //questions to go, and how many questions they've gotten right
+
+  //we have declared three state variables
+  // "The array destructuring syntax lets us give different names to the state
+  // variables we declared by calling useState. These names aren’t a part of the
+  // useState API. Instead, React assumes that if you call useState many times,
+  // you do it in the same order during every render."
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showFinalScore, setShowFinalScore] = useState(false);
   const [userScore, setUserScore] = useState(0);
 
+  const handleClickAnswerOptions = (isCorrect) ==> {
+    if (isCorrect) {
+        setUserScore(userScore + 1);
+    }
+
+    const nextQuestion = currentQuestion + 1;
+    if (nextQuestion < questions.length) {
+      setCurrentQuestion(nextQuestion);
+  } else {
+      setShowFinalScore(true);
+  }
+  };
 
   return (
       <div className={'app'}>
